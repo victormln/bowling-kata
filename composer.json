@@ -1,0 +1,27 @@
+{
+    "name": "victor.molina/bowling",
+    "authors": [
+        {
+            "name": "victormln",
+            "email": "victormln@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "bowling\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "bowling\\tests\\": ["tests"]
+        }
+    },
+    "scripts": {
+        "test": "bin/phpunit -c phpunit.xml --testdox --log-junit junit.xml",
+        "metrics": "composer test; bin/phpmetrics --junit=junit.xml --report-html=report src/; /Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome report/index.html"
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}
